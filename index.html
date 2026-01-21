@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Special</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredoka:wght@300;400;500;600&family=Kalam:wght@300;400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              hand: ['Caveat', 'cursive'],
+              display: ['Shrikhand', 'serif'],
+              body: ['Nunito', 'sans-serif'],
+              heading: ['Fredoka', 'sans-serif'],
+              handwriting: ['Kalam', 'cursive'],
+            },
+            colors: {
+              primary: '#FF6B9D',
+              'primary-hover': '#FF5588',
+              'retro-pink': '#FFB3D9',
+              'retro-yellow': '#FFD4E5',
+              'retro-green': '#D4A5D4',
+              'note-green': '#F5D5F0',
+              'note-yellow': '#FFF0F6',
+              'background-light': '#FFF5FB',
+            },
+            boxShadow: {
+              'retro': '4px 4px 0px 0px rgba(255, 107, 157, 0.25)',
+              'retro-hover': '2px 2px 0px 0px rgba(255, 107, 157, 0.2)',
+            },
+            animation: {
+              'float': 'float 3s ease-in-out infinite',
+              'float-slow': 'float-slow 4s ease-in-out infinite',
+              'spin-slow': 'spin 8s linear infinite',
+              'bounce-slow': 'bounce 3s infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              'float-slow': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-6px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes letter-emerge { 
+        from { transform: translateX(-50%) translateY(100%); opacity: 0; } 
+        to { transform: translateX(-50%) translateY(0); opacity: 1; } 
+      }
+      .animate-letter-emerge { animation: letter-emerge 0.8s ease forwards; }
+      
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+      body {
+        background-color: #FFF5FB;
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:16px"><text y="16">💖</text></svg>'), auto;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.27.3",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
